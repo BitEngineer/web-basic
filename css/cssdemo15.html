@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>浮动定位:左浮动</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		#dd2{border:1px solid #000;width:500px;}
+		#d4,#d5,#d6{border:1px solid #000;}
+		#d4{background-color:#f00;width:100px;height:100px;}
+		#d5{background-color:#0f0;width:150px;height:150px;}
+		#d6{background-color:#00f;width:300px;height:300px;}
+		p{border:1px solid #000;}
+		/*让d1浮动*/
+		#d4{float:left;}
+		/*接着让d2浮动*/
+		#d5{float:left;}
+		/*让d3浮动*/
+		#d6{float:left;}
+	</style>
+</head>
+<body>
+	<div id="dd2">
+		<div id="d4"></div>
+		<div id="d5"></div>
+		<div id="d6"></div>
+	<!--消除浮动影响：通常需要浮动的那部分页面的布局单独放到一个div中，那么浮动的影响只是对父div，只需消除这部分影响即可-->
+	<!--这里浮动的影响是：改变了父div的高度，因此父div之下的块级元素布局被打乱-->
+		<div style="clear:left;"></div>
+	</div>
+	<p>dengjian</p>
+</body>
+</html>

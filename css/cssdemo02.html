@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css样式规则的特性</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+<!--验证继承性-->
+<!--这样可以为所有body的元素及其子元素的文本设置字体-->
+		body{font-family:'微软雅黑','文泉驿正黑','黑体';}
+<!--验证层叠性-->
+<!--层叠性就是同一个元素的样式的不同属性，比如字体颜色和背景色就是层叠的-->
+		h1{color:red;}
+		h1{background-color:silver;}
+<!--验证优先级-->
+<!--在同一个元素的相同样式属性中，后定义的优先级高-->
+		p{color:red;}
+		p{color:blue;}
+	</style>
+</head>
+<body>
+	<h1>AAAAAAA</h1>
+	<p>BBBBBB</p>
+</body>
+</html>

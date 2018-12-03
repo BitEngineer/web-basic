@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>使用javascript生成HTML</title>
+	<meta charset="utf-8" />
+	<!--先出现head，再出现body-->
+	<script>
+		alert("head");
+	</script>
+</head>
+<body>
+	<h1>在页面加载的过程中执行JavaScript</h1>
+	<script>
+		document.write("<p>hello</p>");
+		alert("body");
+	</script>
+</body>
+</html>

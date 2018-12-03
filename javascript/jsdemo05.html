@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS动态地为元素注册事件</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<script type="text/javascript">
+		function f1(){
+			var btn2 = document.getElementById("btn2");
+			
+			var f2 = function(){
+				alert("hello");
+			};
+			
+			btn2.onclick = f2;
+			
+			alert("已经为按钮-注册了单击事件");
+		}
+	</script>
+</head>
+<body>
+	<input id="btn1" type="button" value="+" onclick="f1()"></input>
+	<input id="btn2" type="button" value="-"></input>
+</body>
+</html>

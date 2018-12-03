@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>测试：在JS中为HTML元素添加事件及其响应--使用不带参数的函数</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript">
+		function add_button(){
+			var bnt=document.createElement("input");
+			bnt.type="button";
+			bnt.value="-";
+			//在js代码中动态地添加事件及其响应
+			//错误方式---bnt.onclick="showsomething();";---通过看PPT得到答案
+			bnt.onclick=showsomething;
+			var div=document.getElementsByTagName("div");
+			//特别注意：getElenmentsByTagName()方法返回的是数组，所以下面的用法是错误的
+			//要善于运用浏览器的调试器和控制台
+			//div.appendChild(bnt);
+			div[0].appendChild(bnt);
+		}
+		
+		function showsomething(){
+			alert("hello");
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<input type="button" value="+" onclick="add_button();"></input>
+	</div>
+</body>
+</html>

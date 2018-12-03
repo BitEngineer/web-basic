@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>事件处理机制</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		div{border:1px solid black;height:100px;}
+		p{border:1px solid red;height:50px;}
+	</style>
+	<script type="text/javascript">
+		function f1(){
+			alert("div");
+		}
+		function f2(){
+			alert("p");
+		}
+		function f3(e){
+			alert("input");
+			//取消事件冒泡--event对象的属性
+			//IE
+			if(e.stopPropagation){
+				e.stopPropagation();
+			//firefox			
+			}else{
+				e.cancelBubble=true;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div onclick="f1(event);">
+		<p onclick="f2(event);">xxxx
+			<input type="button" value="按钮" onclick="f3(event);"></input>		
+		</p>
+	</div>
+</body>
+</html>

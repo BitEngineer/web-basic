@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>背景</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		/*为整个页面设置背景颜色--样式设置在body上*/
+		body{background-color:#f00;}
+		/*为整个页面设置背景图片--样式设置在body上*/
+		body{background-image:url(./images/background.png)}
+		/*为所有的div区域添加背景图片设置div*/
+		div{border:1px solid #f00;width:900px;height:300px;
+			background-image:url(./images/airplane.png);}
+		/*设置背景图片的平铺样式*/
+		#b1{background-repeat:no-repeat;}
+		/*设置背景图片的位置*/
+		#b2{background-repeat:no-repeat;
+			background-position:center;}
+		/*设置背景图片不随滚动条而滚动*/
+		body{background-attachment:fixed;}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div id="b1"></div>
+	<div id="b2"></div>
+	<div id="b2"></div>
+	<div id="b2"></div>
+	<div id="b2"></div>
+	<div id="b2"></div>
+	<div id="b2"></div>
+	<div id="b2"></div>
+	<div id="b2"></div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>使用jquery注册事件</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="./jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		//使用jquery在js中注册事件，并添加响应---动态地为DOM对象注册事件
+		//函数f1的作用是为按钮2添加事件和响应
+		//页面加载后，如果不点击按钮1，那么按钮2上就没有事件，点击后不会有响应
+		//使用jquery添加事件的方式
+		//1. jquery对象.bind("事件名",响应函数)
+		//2. jquery对象.事件名(响应函数)
+		function f1(){
+			var btn2=$("#input2");
+			//btn2.bind("click",f2);
+			btn2.click(f2);	
+		}
+
+		function f2(){
+			alert("点击的是按钮2");
+		}
+	</script>
+</head>
+<body>
+	<input id="input1" type="button" value="按钮1" onclick="f1();"></input>
+	<input id="input2" type="button" value="按钮2"></input>
+</body>
+</html>

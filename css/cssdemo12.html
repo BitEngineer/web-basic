@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>表格的样式设置</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		/*一般而言，表格的内容和表格的样式要分离，这样便于维护*/
+		/*设置表格的大小和位置：通过margin设置位置*/
+		table{width:300px;height:100px;
+				margin:0px auto;}
+		/*为表格添加边框:如果只为table元素加边框，只是外边框*/
+		table{border:1px solid #000;}
+		td{border:1px solid #00f;}
+		/*边框合并*/
+		table{border-collapse:collapse;}
+		/*设置单元格的文本水平居中*/
+		td{text-align:center;}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>aaa</td>
+			<td>bbb</td>
+		</tr>
+		<tr>
+			<td>ccc</td>
+			<td>ddd</td>
+		</tr>
+	</table>
+</body>
+</html>

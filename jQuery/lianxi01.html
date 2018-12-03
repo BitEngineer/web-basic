@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>使用jQuery</title>
+	<meta charset="utf-8" />
+	<!--要想使用jQuery，要先以外部方式引入jQuery的js文件-->
+	<script type="text/javascript" src="./jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		//直接使用js定义函数
+		function bigger(){
+			var p=document.getElementsByTagName("p");
+			for(var i=0;i<p.length;i++){
+				//要想获取该属性，必须以内联方式在相应的元素上定义对应的属性
+				var sizeStr=p[i].style.fontSize;
+				//alert(sizeStr);
+				var fontSizeStr=sizeStr.replace("px","");
+				//alert(fontSizeStr);
+				var fontSize=parseInt(fontSizeStr);
+				var fontSize=fontSize+1;
+				p[i].style.fontSize=fontSize+"px";
+			}
+		}
+
+		//使用jQuery库定义函数
+		function smaller(){
+			//$是jQuery的元素选择器，css()是jQuery的方法，用于操作样式
+			var fontSizeStr=$("p").css("font-size");
+			var fontSize=parseInt(fontSizeStr.replace("px",""))-1;
+			$("p").css("font-size",fontSize+"px");
+		}
+	</script>
+</head>
+<body>
+	<p style="font-size:20px;">xxx</p>
+	<p style="font-size:20px;">xxx</p>
+	<button onclick="bigger();">+</button>
+	<button onclick="smaller();">-</button>
+</body>
+</html>

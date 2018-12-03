@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery:页面加载完后立即为按钮注册事件</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="./jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		//在页面加载后，立即处理某一件事情---处理方式--$(funcName)或$(function(){})--匿名函数
+		//页面加载后立即执行函数f1,函数f1为按钮注册事件
+		$(f1);
+		//页面加载后执行的任务---函数f1--为按钮注册单击事件
+		function f1(){
+			$("input").click(f2);
+			alert("按钮事件添加完毕");
+		}
+		//为按钮添加单击事件的响应
+		function f2(){
+			alert("hello");
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="按钮"></input>
+</body>
+</html>

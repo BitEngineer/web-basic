@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>表格</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+<body>
+	<h3>不做样式设置的表格</h3>
+	<table>
+		<tr>
+			<td>学号</td>
+			<td>姓名</td>
+			<td>性别</td>
+		</tr>
+		<tr>
+			<td>1001</td>
+			<td>孙悟空</td>
+			<td>男</td>
+		</tr>
+	</table>
+	
+	<h3>添加边框的表格</h3>
+	<table border="1px solid #000;">
+		<tr>
+			<td>学号</td>
+			<td>姓名</td>
+			<td>性别</td>
+		</tr>
+		<tr>
+			<td>1001</td>
+			<td>孙悟空</td>
+			<td>男</td>
+		</tr>
+	</table>
+	
+	<h3>表格:单元格跨行</h3>
+	<!--在要跨行的单元格上设置rowspan属性，属性值表示该单元格要跨的行数-->
+	<table border="1px solid #000;">
+		<tr>
+			<td rowspan="2">aaa</td>
+			<td>bbb</td>
+		</tr>
+		<tr>
+			<td>ccc</td>
+		</tr>
+	</table>
+		
+	<h3>表格:单元格跨列</h3>
+	<!--在要跨行的单元格上设置span属性，属性值表示该单元格要跨的行数-->
+	<table border="1px solid #000;">
+		<tr>
+			<td colspan="2">aaa</td>
+		</tr>
+		<tr>
+			<td>bbb</td>
+			<td>ccc</td>
+		</tr>
+	</table>
+	
+	<h3>表格:行分组</h3>
+	<table border="1px solid #000">
+		<thead>
+			<tr>
+				<td>编号</td>
+				<td>名称</td>
+				<td>金额</td>			
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>001</td>
+				<td>鼠标</td>
+				<td>50</td>			
+			</tr>
+			<tr>
+				<td>002</td>
+				<td>键盘</td>
+				<td>100</td>			
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="2">合计</td>
+				<td>150</td>			
+			</tr>
+		</tfoot>
+	<table
+</body>
+</html>

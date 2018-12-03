@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>联动菜单</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript">
+		var cities=[
+				["请选择"],
+				["昆明市","曲靖市"],
+				["杭州市","宁波市"]
+				];
+		function change(){
+			
+			//首先要删除上一次的所有city下拉选项，如果不删除，则所有选项会全部放在一起
+			//要删除，首先要选中所有的这些下拉选项
+			//var city=document.getElementById("city");
+			//var options=city.getElementsByTagName("option");
+			//for(var i=0;i<options.length;i++){
+			//	city.removeChild(options[i]);
+			//}
+			//特别注意：var options=city.getElementsByTagName("option");只能获取被选中的下拉选项
+			var city=document.getElementById("city");
+			var options=city.childNodes;
+			for(var i=0;i<options.length;i++){
+				city.removeChild(options[i]);
+			}
+
+			//把所有provice对应的下拉选添加到city下拉选中
+			//关键是：怎样表达某个下拉选项被选中了---根据在控制台中的测试结果，
+			//表明<select>元素的value属性值为被选中的下拉选项对应的value
+			var province=document.getElementById("province");
+			//被选中的下拉选option的value值
+			var selected=province.value;
+			for(var i=0;i<cities[selected].length;i++){
+				//创建下拉选项
+				var option=document.createElement("option");
+				//设置下拉选的文本内容
+				option.innerText=cities[selected][i];
+				//设置下拉选项的value属性
+				option.value=i;
+				//把该选项添加到city中
+				city.appendChild(option);
+			}
+		}
+	</script>
+</head>
+<body>
+	<select id="province" onchange="change();">
+		<option value="0">请选择</option>
+		<option value="1">云南省</option>
+		<option value="2">浙江省</option>
+	</select>
+	<select id="city">
+		<option value="0">请选择</option>
+	</select>	
+</body>
+</html>

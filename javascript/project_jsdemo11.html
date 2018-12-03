@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>照片轮播</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		img{width:480px;height:360px;}
+	</style>
+	<script type="text/javascript">
+		var srcs=["../images/f1.jpg","../images/f2.jpg","../images/f3.jpg","../images/f4.jpg"];
+		var i=0;
+		function start(){
+			setInterval(function(){
+					var img=document.getElementById("img1");
+					i=i+1;
+					i=i%4;
+					img.setAttribute("src",srcs[i]);
+					},1000);
+		}
+	</script>
+</head>
+<body>
+	<img src="../images/f1.jpg" id="img1" onload="start();"></img>
+</body>
+</html>

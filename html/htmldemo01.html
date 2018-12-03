@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>标题，段落，图片，超链接</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+<body>
+	<!--HTML文档由HTML标签和标签的文本内容组成，标签具有属性-->
+
+	<!--在顶部设置锚点，使用name属性-->
+	<a name="top"></a>
+
+	<h3>标题</h3>
+	<h1>hello,world!</h1>
+	<h2>hello,world!</h2>
+	<h3>hello,world!</h3>
+	<h4>hello,world!</h4>
+	<h5>hello,world!</h5>
+	<h6>hello,world!</h6>
+	<hr/>
+	
+	<p>段落</p>
+	<p>我正在学习HTML</p>
+	<hr/>
+	
+	<h3>图片</h3>
+	<!--img元素的重要属性 src width height-->
+	<img src="../images/pig.png"></img>
+	<hr/>
+	
+	<h3>超链接</h3>
+	<!--a元素的重要属性 href ，注意 a 只有添加了文本才会显示出来-->
+	<!--超链接链接到网络资源时，href是URL-->
+	<a href="http://www.baidu.com">百度</a><br/>
+	<!--链接本地主机上的资源(文件)，浏览器会针对不同的资源选择不同的响应方式：
+	图片会选择浏览的方式打开，tex文档也是浏览方式，
+	pdf和zip浏览器会出现选择，有下载和打开-->
+	<a href="../images/pig.png">点击查看图片</a><br/>
+	<a href="../doc/test.txt">点击查看text文件</a><br/>
+	<a href="../doc/test.pdf">点击查看pdf文件</a><br/>
+	<a href="../doc/test.rar">点击查看rar文件</a><br/>
+	<!--超链接链接到锚点时，href属性值为#加上锚点超链接的name属性值-->
+	<a href="#top">TOP</a><br/>
+</body>
+</html>

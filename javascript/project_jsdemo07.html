@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>定时器</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript">
+		var tID;
+		function start(){
+			tID=window.setInterval(function(){
+				var now = new Date();
+				var timeStr=now.toTimeString();
+				var span=document.getElementById("time");
+				span.innerText=timeStr;	
+				},1000);
+		}
+		function stop(){
+			window.clearInterval(tID);
+		}
+	</script>
+</head>
+<body>
+	<p><span id="time">00:00:00</span></p>
+	<input type="button" value="开始" onclick="start();"></input>
+	<input type="button" value="停止" onclick="stop();"></input>
+</body>
+</html>

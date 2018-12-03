@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery选择器</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="./jquery-1.11.1.js"></script>
+</head>
+<body>
+	<!--演示层次选择器-->
+	<div id="d1">
+		<ul>
+			<li>杭州</li>
+			<li id="nb">宁波</li>
+			<li>温州</li>
+			<li>嘉兴</li>
+		</ul>
+	</div>
+	<!--演示基本过滤选择器-->
+	<div id="d2">
+		<table>
+			<tr>
+				<td>aaa</td>
+				<td>aaa</td>
+				<td>aaa</td>			
+			</tr>
+			<tr>
+				<td>bbb</td>
+				<td>bbb</td>
+				<td>bbb</td>			
+			</tr>
+			<tr>
+				<td>ccc</td>
+				<td>ccc</td>
+				<td>ccc</td>			
+			</tr>
+			<tr>
+				<td>ddd</td>
+				<td>ddd</td>
+				<td>ddd</td>			
+			</tr>
+		</table>
+	</div>
+	<!--演示内容过滤选择器-->
+	<div id="d3">
+		<p></p>
+		<p>xxx</p>
+		<p>yyy</p>
+	</div>
+	<!--演示状态过滤选择器-->
+	<div>
+		<p>
+			国籍
+			<!--disabled属性表明：文本框内容不可编辑-->
+			<input type="text" value="中国" disabled></input>	
+		</p>
+		<p>
+			帐号
+			<input type="text">	
+		</p>
+		<p>
+			密码
+			<input type="password">	
+		</p>
+		<p>
+			篮球:<input type="checkbox" name="fvs" />
+			足球:<input type="checkbox" name="fvs" />
+			乒乓求:<input type="checkbox" name="fvs" />
+		</p>
+		<p>
+			<select>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+			</select>
+		</p>
+	</div>
+</body>
+</html>

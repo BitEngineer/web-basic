@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>项目:版本4</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+	/*1、页面整体布局*/
+		/*为所有div添加边框，设计玩之后方便去掉*/
+		div{border:1px solid #f00;}
+		/*logo区*/
+		#d1{width:960px;height:61px;
+			margin:0px auto;}
+		/*导航区*/
+		#d2{width:100%;height:91px;}
+		/*核心区*/
+		#d3{width:100%;height:410px;
+			padding-top:10px;}
+		/*版权区*/
+		#d4{width:960px;height:50px;
+			margin:0px auto;}
+		/*内容区*/
+		#d3_{border:5px solid #8ac1db;
+			width:950px;height:390px;
+			margin:0px auto;}
+		/*按钮区*/
+		#d3_1{width:910px;height:40px;
+				margin:0px auto;}
+		/*表格区*/
+		#d3_2{width:910px;height:310px;
+				margin:0px auto;}
+		/*分页区*/
+		#d3_3{width:910px;height:40px;
+				margin:0px auto;}
+				
+	/*2、设置页面背景色和背景图片---注释没有加注释符号，导致样式
+	设置失败---html调试真的有点麻烦，争取一次性写对*/
+		/*为整个页面设置背景色*/
+		body{background-color:#0ea8d8;}
+		/*设置导航区背景色*/
+		#d2{background-color:#0488bb;}
+		/*设置内容区背景色*/
+		#d3_{background-color:#e8f3f8;}
+		/*为logo区添加背景图片*/
+		#d1{background-image:url(./img/top_bg.png)}
+		
+	/*3、设置表格样式*/
+		/*添加表格边框*/
+		table{border:1px solid #000;border-collapse:collapse;}
+		td{border:1px solid #000;}
+		/*设置表格大小*/
+		table{width:910px;}
+		thead{height:50px;}
+		tbody{height:160px;}
+		/*设置单元格元素的对齐方式*/
+		td{text-align:center;}
+		/*设置标题行的背景色*/
+		thead{background-color:#fbedce;}
+		/*设置数据行的背景色*/
+		tbody{background-color:#f7f9fd;}
+		/*扩大按钮:可以使用padding，同时让按钮标签的文字(注意它不是文本)移到靠右的位置*/
+		.modify,.delete{padding:5px 0px 5px 15px;}
+		/*设置“修改”按钮的背景图和位置*/
+		.modify{background-image:url(./img/modification.png);
+				background-position:left;
+				background-repeat:no-repeat;}
+		/*设置“删除”按钮的背景图和位置*/
+		.delete{background-image:url(./img/delete.png);
+				background-position:left;
+				background-repeat:no-repeat;}
+		/*设置鼠标悬浮---对数据行*/
+		tbody tr:hover{background-color:#cddde4;}
+		
+	/*4、设置文本样式*/
+		/*设置段落的文本样式*/
+		p{margin:0px;text-align:center;}
+		/*设置“退出”超链接的文本样式*/
+		/*设置颜色*/
+		#d1 a:link{color:#fff;}
+		#d1 a:visited{color:#fff;}
+		/*去掉下划线*/
+		#d1 a{text-decoration:none;}
+		/*设置位置:这样设置为什么不起作用---这样的定位只适用于流定位，
+		现在要定位的是元素与父元素的间距：要用其他定位方式*/
+		#d1 a{margin-right:40px;margin-top:15px;}
+	</style>
+</head>
+<body>
+	<!--logo区-->
+	<div id="d1">
+		<a href="#" style="border:1px solid red">[退出]</a>
+	</div>
+	<!--导航区-->
+	<div id="d2">
+	</div>
+	<!--核心区-->
+	<div id="d3">
+		<!--内容区-->
+		<div id="d3_">
+			<!--按钮区-->
+			<div id="d3_1"></div>
+			<!--表格区-->
+			<div id="d3_2">
+				<table>
+					<thead>
+						<tr>
+							<td><input type="checkbox" /><label>全选</label></td>
+							<td>管理员ID</td>
+							<td>姓名</td>
+							<td>拥有角色</td>
+							<td></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>1001</td>
+							<td>宋高宗</td>
+							<td>皇帝</td>
+							<td><input type="button" value="修改" class="modify"/>
+								<input type="button" value="删除" class="delete"/>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>1002</td>
+							<td>秦桧</td>
+							<td>宰相</td>
+							<td><input type="button" value="修改" class="modify"/>
+								<input type="button" value="删除" class="delete"/>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>1003</td>
+							<td>岳飞</td>
+							<td>大将</td>
+							<td><input type="button" value="修改" class="modify"/>
+								<input type="button" value="删除" class="delete"/>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>1004</td>
+							<td>韩世忠</td>
+							<td>大将</td>
+							<td><input type="button" value="修改" class="modify"/>
+								<input type="button" value="删除" class="delete"/>
+							</td>
+						</tr>
+					</tbody>
+				</table>	
+			</div>
+			<!--分页区-->
+			<div id="d3_3"></div>
+		</div>
+	</div>
+	<!--版权区-->
+	<div id="d4">
+		<p>&lt;源自北美的技术，最优秀的师资，最真实的企业环境&gt;</p>
+		<p>版权所有&copy;加拿大达内IT培训集团公司</p>
+	</div>
+</body>
+</html>
+</html>

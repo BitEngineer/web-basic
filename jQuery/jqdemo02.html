@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery对象</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="./jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		//验证jquery对象的本质是DOM数组
+		function f1(){
+			//用jquery元素选择器选中所有<p>，得到的结果是所有元素节点<p>组成的数组,ps是jquery对象
+			var ps=$("p");
+			//alert(ps.length);
+			
+			//获取其中的某个元素
+			//第一种方法ps[index]，这是js提供的方式
+			var p0=ps[0];
+			//alert(p0.innerText);
+			//第二种方法ps.get(index)，这是jquery封装的方法---返回的是DOM对象
+			var p1=ps.get(1);
+			alert(p1.innerText);	
+		}
+
+		//演示：将DOM对象转换为jquery对象
+		//将当前点击图片变大
+		//接收到的img参数是DOM对象
+		//用jquery方法修改图片样式
+		function big(img){
+			//jquery的width()和height()方法可以直接修改jquery对象的宽和高
+			//要使用这两个方法，首先要将DOM对象转换为jquery对象
+			$(img).width("500px").height("300px");
+		}
+	</script>
+</head>
+<body>
+	<p>xxx</p>
+	<p>yyy</p>
+	<p>zzz</p>
+	<div>
+		<input type="button" onclick="f1();"></input>
+	</div>
+	<div>
+		<!--也可以将event对象传入，通过获取事件源得到点击的是哪个对象-->
+		<img src="../images/01.jpg" onclick="big(this);"></img>
+		<img src="../images/02.jpg" onclick="big(this);"></img>
+		<img src="../images/03.jpg" onclick="big(this);"></img>	
+	</div>
+</body>
+</html>

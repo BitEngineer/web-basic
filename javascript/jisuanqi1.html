@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>简单计算器</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript">
+	function cal(){
+		var inputText=document.getElementById("calString");
+		var span=document.getElementById("result");
+		var calString=inputText.value;
+		try{
+			var result=eval("("+calString+")");
+			span.innerHTML=result;
+		}catch(e){
+			span.innerHTML="输入有误";
+		}
+		
+		}	
+	</script>
+</head>
+<body>
+	<input type="text" id="calString"></input>
+	<input type="button" onclick="cal();">=</input>
+	<span id="result"></span>
+</body>
+</html>

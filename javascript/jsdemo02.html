@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>使用javascript响应事件</title>
+	<meta charset="utf-8" />
+	<!--嵌入式使用javascript-->
+	<script type="text/javascript">
+		function f2(){
+		alert("hello");
+		console.log("调试")}
+	</script>
+	<!--文件调用式-->
+	<script type="text/javascript" src="./demo01.js"></script>
+</head>
+<body>
+<!--事件定义式-->
+	<input type="button" value="按钮1" onclick="alert('hello');">
+<!--嵌入式-->
+<input type="button" value="按钮2" onclick="f2();">
+<!--文件调用式-->
+<input type="button" value="按钮3" onclick="f3();">
+</body>
+</html>

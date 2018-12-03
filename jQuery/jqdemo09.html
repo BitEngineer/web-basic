@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>在jquery中使用event对象</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="./jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		//在jquery中使用event对象的好处是：提供浏览器兼容，使用统一的方式来操作event；
+		//同时，必须要动态地注册事件---这样能使HTML和事件分离；缺点是：阅读代码非常不方便
+		//页面加载完成，调用f1函数为所有组件注册事件
+		//第一种方式
+		$(function(){f1();});
+		function f1(){
+			$("input").click(function(e){
+				f2(e);
+			});
+		}
+		function f2(e){
+			alert("("+e.pageX+","+e.pageY+")");
+		}
+
+		//第二种方式
+		//$(function(){f1();});
+		//function f1(){
+		//	$("input").click(function(e){
+		//		alert("("+e.pageX+","+e.pageY+")");
+		//	});
+		//}
+
+		//第三种方式
+		//$(function(){
+		//	$("input").click(function(e){
+		//		alert("("+e.pageX+","+e.pageY+")");
+		//		});		
+		//	});
+	</script>
+</head>
+<body>
+	<input type="button"></input>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>登录界面模拟</title>
+	<meta charset="utf-8" />
+	<style>
+		.error_message{color:#f00;}
+	</style>
+	<script>
+		//校验用户名的函数
+		function check_name(){
+			var inputText=document.getElementById("name");
+			var userName=inputText.value;
+			var regex=/[a-z0-9_]{3,}/;
+			//用户名不对，提示的方式是为span增加错误的特有样式，而不是输出提示信息；用户名正确增加空样式
+			var span=document.getElementById("s1");
+			if(!userName.match(regex)){
+				span.className="error_message";
+			}else{
+				span.className="";
+			}
+		}
+
+		function check_password(){
+
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<p>
+			<label>用户名</label>
+			<input type="text" id="name" onblur="check_name();"/> <span id="s1">3-20位字符</span>
+		</p>
+		<p>
+			<label>密码</label>	
+			<input type="password" /> <span>6-20位字符</span>
+		</p>
+		<div>
+			<input type="button" value="登录" />	
+		</div>
+	</form>
+</body>
+</html>

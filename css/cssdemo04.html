@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>box模型</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<style type="text/css">
+		#d1{border:1px solid #ff0000;}
+		#d2{border:1px dashed #00ff00;
+			width:50%;height:100px;
+			}
+		#d3{border:1px solid #0000ff;
+			width:100px;height:40px;
+			overflow:scroll;
+			}
+			
+		#d4,#d5,#d6,#d7{
+			border:1px solid #f00;
+			width:100px;height:50px;
+		}
+		/*演示内边距的作用*/
+		#d5{
+			padding:30px 10px;
+		}
+		/*演示外边距的作用*/
+		#d6{
+			margin:30px 0px 0px 20px;
+		}
+		/*利用外边距margin设置元素水平居中*/
+		#d7{
+			margin:0px auto;
+		}
+	</style>
+</head>
+<body>
+	<h3>边框</h3>
+	<!--div只设置边框，不设置内容区大小时，使用默认大小hight=0-->
+	<div id="d1"></div>
+	<!--div元素的内容区大小设置-->
+	<div id="d2"></div>
+	<!--元素内容溢出边框的处理-->
+	<div id="d3">
+		<!--p元素有默认的外边距：16px 0px-->
+		<p>今天天气真好，适合出游;元素内容溢出边框的处理</p>
+	</div>
+	<hr/>
+	
+	<h3>内外边距</h3>
+	<div id="d4"></div>
+	<div id="d5"></div>
+	<div></div>
+	<div id="d6"></div>
+	<div id="d7"></div>
+</body>
+</html>

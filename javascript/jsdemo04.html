@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS动态修改元素样式</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<style type="text/css">
+		.size{width:800px;height:500px;}
+	</style>
+	<script>
+		function changeSize(){
+			var img1 = document.getElementById("img1");
+			img1.className = "size";
+		}
+		function changeColor(){
+			var p1 = document.getElementById("p1");
+			p1.style.color = "#f00";
+		}
+		function changeFontSize(){
+			var p2 = document.getElementById("p2");
+			p2.style.fontSize = "100px";
+		}
+	</script>
+</head>
+<body>
+	<img src="../images/pig.png" id="img1" onclick="changeSize();"></img><br/>
+	<p>xxxxxxxxxxxxxx</p>
+	<p id="p1" onclick="changeColor();">xxxxxxxxxxxxxx</p>
+	<p>yyyyyyyyyyyyyyyyy</p>
+	<p id="p2" onclick="changeFontSize()">yyyyyyyyyyyyyyyyy</p>
+</body>
+</html>
